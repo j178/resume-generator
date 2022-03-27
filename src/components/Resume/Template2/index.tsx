@@ -10,6 +10,7 @@ import {
   EnvironmentFilled,
   HeartFilled,
   CrownFilled,
+  WechatFilled,
 } from '@ant-design/icons';
 import cx from 'classnames';
 import _ from 'lodash-es';
@@ -118,6 +119,12 @@ export const Template2: React.FC<Props> = props => {
                   >
                     {profile.zhihu}
                   </span>
+                </div>
+              )}
+              {profile?.wechat && (
+                <div className="github">
+                  <WechatFilled style={{ color: theme.color, opacity: 0.85 }} />
+                  <span>{profile.wechat}</span>
                 </div>
               )}
               {profile?.workExpYear && (
