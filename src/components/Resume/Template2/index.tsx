@@ -257,14 +257,14 @@ export const Template2: React.FC<Props> = props => {
                     />
                     {skills}
                   </span>
-                  {skill.skill_level && (
+                  {/* {skill.skill_level && (
                     <Rate
                       allowHalf
                       disabled
                       value={skill.skill_level / 20}
                       className="skill-rate"
                     />
-                  )}
+                  )} */}
                 </div>
               ) : null;
             })}
