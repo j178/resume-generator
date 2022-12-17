@@ -16,7 +16,7 @@ import _ from 'lodash-es';
 import { getLocale } from '@/locale';
 import { getDefaultTitleNameMap } from '@/datas/constant';
 import { Avatar } from '../../Avatar';
-import { ResumeConfig, ThemeConfig } from '../../types';
+import type { ResumeConfig, ThemeConfig } from '../../types';
 import './index.less';
 
 type Props = {
@@ -80,7 +80,12 @@ export const Template1: React.FC<Props> = props => {
       <div className="basic-info">
         {/* 头像 */}
         {!value?.avatar?.hidden && (
-          <Avatar avatarSrc={value?.avatar?.src} className="avatar" shape={value?.avatar?.shape} size={value?.avatar?.size} />
+          <Avatar
+            avatarSrc={value?.avatar?.src}
+            className="avatar"
+            shape={value?.avatar?.shape}
+            size={value?.avatar?.size}
+          />
         )}
         {/* 个人信息 */}
         <div className="profile">
@@ -140,7 +145,7 @@ export const Template1: React.FC<Props> = props => {
                   style={{ color: theme.color, opacity: 0.85 }}
                 />
                 <span>
-                  {i18n.get('工作地')}: {profile.workPlace}
+                  {i18n.get('期望工作地')}: {profile.workPlace}
                 </span>
               </div>
             )}
